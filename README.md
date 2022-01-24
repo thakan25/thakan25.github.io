@@ -7,6 +7,9 @@ Till now I have figured out-
 * steps involved in building the CUPS from the source code
 
 next come _how to share printers from one system to another?_ 
+
+continue [Link](https://wiki.debian.org/CUPSPrintQueues#The_device-uri_for_a_Networked_Printer)
+
 ## Welcome to GitHub Pages
 You can use the [editor on GitHub](https://github.com/thakan25/thakan25.github.io/edit/main/README.md) to maintain and preview the content for your website in Markdown files.
 
