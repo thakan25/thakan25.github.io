@@ -10,6 +10,10 @@ next come _how to share printers from one system to another?_
 
 _I am stuck in setting up VM_
 
+```markdown 
+lets get back to it
+```
+
 ## Welcome to GitHub Pages
 You can use the [editor on GitHub](https://github.com/thakan25/thakan25.github.io/edit/main/README.md) to maintain and preview the content for your website in Markdown files.
 
