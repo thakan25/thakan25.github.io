@@ -1,7 +1,8 @@
+---
 layout: page
 title: "linux blog"
 permalink: /about/linuxblog/
-
+---
 
 # OpenPrinting pre-task documentation by Sachin
 after facing issues with detecting local printers by source-build cups, I am advised by Till Kamppeter to use second machine and share cups-pdf queue from that machine using **avahi-discover** 
