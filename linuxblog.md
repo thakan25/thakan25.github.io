@@ -4,21 +4,10 @@ title: "linux blog"
 permalink: /linuxblog/
 ---
 
-# OpenPrinting pre-task documentation by Sachin
-after facing issues with detecting local printers by source-build cups, I am advised by Till Kamppeter to use second machine and share cups-pdf queue from that machine using **avahi-discover** 
+# my blogs
 
-Till now I have figured out-
-* How to use system CUPS and create print queues using CUPS-portal
-* understood the code and important configuration files related to CUPS
-* steps involved in building the CUPS from the source code
-
-next come _how to share printers from one system to another?_ 
-
-_I am stuck in setting up VM_
-
-```markdown 
-lets get back to it
-```
+- [openprinting task](https://thakan25.github.io/linuxblog/openprinting)
+- [intro to bash scripting](https://thakan25.github.io/linuxblog/bash)
 
 ## Welcome to GitHub Pages
 You can use the [editor on GitHub](https://github.com/thakan25/thakan25.github.io/edit/main/README.md) to maintain and preview the content for your website in Markdown files.
