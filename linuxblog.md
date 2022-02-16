@@ -1,7 +1,7 @@
 ---
 layout: page
 title: "linux blog"
-permalink: /about/linuxblog/
+permalink: /linuxblog/
 ---
 
 # OpenPrinting pre-task documentation by Sachin
