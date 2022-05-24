@@ -6,9 +6,7 @@ permalink: /linuxblog/
 
 # my blogs
 
-- [openprinting task](https://thakan25.github.io/linuxblog/openprinting)
-- [intro to bash scripting](https://thakan25.github.io/linuxblog/bash)
-
+## hello world
 ## Welcome to GitHub Pages
 You can use the [editor on GitHub](https://github.com/thakan25/thakan25.github.io/edit/main/README.md) to maintain and preview the content for your website in Markdown files.
 
