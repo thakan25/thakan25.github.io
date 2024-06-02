@@ -8,3 +8,5 @@ permalink: /interviews/
 
 ## QuadEye
 
+Not shortlisted for interview
+
