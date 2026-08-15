@@ -1,0 +1,348 @@
+---
+---
+
+// ============================================================================
+// WARM DARK THEME: Claude.ai meets Solarized Dark
+// A night-mode reading platform with low-contrast warmth
+// ============================================================================
+
+// --- COLOR PALETTE ---
+$warm-charcoal:      #211f1c;  // Background
+$warm-surface:       #2a2824;  // Header, footer, code blocks
+$warm-border:        #423e37;  // Borders, dividers
+$warm-text:          #e8e2d4;  // Body text
+$warm-muted:         #a39a87;  // Meta text, dates
+$clay-orange:        #cc785c;  // Primary accent (links, borders)
+$sage-green:         #8fa998;  // Secondary accent (code syntax)
+$sage-muted:         #6b8273;  // Muted sage for comments
+$warm-highlight:     #3a362f;  // Hover backgrounds
+$warm-code-bg:       #282521;  // Inline code background
+
+// --- OVERRIDE MINIMA'S SASS VARIABLES (BEFORE IMPORT) ---
+$text-color:         $warm-text;
+$background-color:   $warm-charcoal;
+$brand-color:        $clay-orange;
+$grey-color:         $warm-muted;
+$grey-color-light:   $warm-border;
+$grey-color-dark:    $warm-surface;
+$content-width:      720px;
+$spacing-unit:       30px;
+
+// Import Minima's base styles
+@import "minima";
+
+// ============================================================================
+// CUSTOM OVERRIDES (AFTER IMPORT)
+// ============================================================================
+
+// --- TYPOGRAPHY ---
+body {
+  font-family: Charter, 'Bitstream Charter', Georgia, 'Times New Roman', serif;
+  font-size: 18px;
+  line-height: 1.7;
+  color: $warm-text;
+  background-color: $warm-charcoal;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+// --- CODE TYPOGRAPHY ---
+code, pre, .highlight {
+  font-family: 'JetBrains Mono', 'SF Mono', Monaco, Consolas, 'Courier New', monospace;
+  font-size: 15px;
+}
+
+// --- HEADINGS ---
+h1, h2, h3, h4, h5, h6 {
+  color: $warm-text;
+  font-weight: 600;
+  letter-spacing: -0.02em;
+}
+
+h1 {
+  font-size: 2.2em;
+  margin-bottom: 0.5em;
+}
+
+h2 {
+  font-size: 1.75em;
+  margin-top: 1.5em;
+  padding-bottom: 0.3em;
+  border-bottom: 2px solid $clay-orange;
+}
+
+h3 {
+  font-size: 1.4em;
+  margin-top: 1.2em;
+  color: $warm-muted;
+}
+
+// --- LINKS ---
+a {
+  color: $clay-orange;
+  text-decoration: none;
+  border-bottom: 1px solid rgba($clay-orange, 0.3);
+  transition: all 0.2s ease;
+
+  &:hover {
+    color: lighten($clay-orange, 10%);
+    border-bottom-color: $clay-orange;
+    background-color: rgba($clay-orange, 0.05);
+  }
+
+  &:visited {
+    color: darken($clay-orange, 8%);
+  }
+}
+
+// --- HEADER ---
+.site-header {
+  background-color: $warm-surface;
+  border-top: 3px solid $clay-orange;
+  border-bottom: 1px solid $warm-border;
+  min-height: 60px;
+}
+
+.site-title {
+  color: $warm-text !important;
+  font-weight: 600;
+  font-size: 1.5em;
+  letter-spacing: -0.02em;
+  border-bottom: none !important;
+
+  &:hover {
+    color: $clay-orange !important;
+    background-color: transparent !important;
+  }
+}
+
+.site-nav {
+  .page-link {
+    color: $warm-muted;
+    border-bottom: none;
+    padding: 0.5em 0.75em;
+    border-radius: 4px;
+
+    &:hover {
+      color: $warm-text;
+      background-color: $warm-highlight;
+      border-bottom: none;
+    }
+  }
+}
+
+// --- FOOTER ---
+.site-footer {
+  background-color: $warm-surface;
+  border-top: 1px solid $warm-border;
+  color: $warm-muted;
+  padding: $spacing-unit 0;
+
+  a {
+    color: $sage-green;
+    border-bottom-color: rgba($sage-green, 0.3);
+
+    &:hover {
+      color: lighten($sage-green, 10%);
+      border-bottom-color: $sage-green;
+    }
+  }
+}
+
+// --- POST METADATA ---
+.post-meta {
+  color: $warm-muted;
+  font-size: 0.9em;
+  font-style: italic;
+}
+
+.post-title {
+  color: $warm-text;
+  letter-spacing: -0.03em;
+}
+
+// --- BLOCKQUOTES ---
+blockquote {
+  color: $warm-muted;
+  border-left: 4px solid $clay-orange;
+  background-color: rgba($warm-surface, 0.5);
+  padding: 1em 1.5em;
+  margin: 1.5em 0;
+  font-style: italic;
+  border-radius: 2px;
+
+  p {
+    margin-bottom: 0.5em;
+  }
+}
+
+// --- CODE BLOCKS ---
+pre, code {
+  background-color: $warm-code-bg;
+  border: 1px solid $warm-border;
+  border-radius: 4px;
+}
+
+pre {
+  padding: 1.2em;
+  overflow-x: auto;
+  line-height: 1.5;
+
+  code {
+    border: none;
+    padding: 0;
+    background-color: transparent;
+  }
+}
+
+code {
+  padding: 0.2em 0.4em;
+  font-size: 0.9em;
+}
+
+// --- ROUGE SYNTAX HIGHLIGHTING (WARM MUTED TONES) ---
+.highlight {
+  background-color: $warm-surface;
+  border-radius: 6px;
+  padding: 1em;
+  margin: 1.5em 0;
+
+  .c,  .cm, .cp, .c1, .cs   { color: $sage-muted; font-style: italic; }  // Comments
+  .k,  .kc, .kd, .kp, .kr   { color: $clay-orange; font-weight: 500; }   // Keywords
+  .kt, .kn, .kv             { color: lighten($clay-orange, 15%); }       // Keyword types
+  .s,  .s1, .s2, .sb, .sc   { color: $sage-green; }                      // Strings
+  .sd, .se, .sh, .si, .sx   { color: lighten($sage-green, 10%); }        // String variants
+  .na, .nb, .nc, .no        { color: lighten($warm-text, 5%); }          // Names
+  .nf, .nn                  { color: $warm-text; font-weight: 500; }     // Functions
+  .nv, .vc, .vg, .vi        { color: lighten($clay-orange, 20%); }       // Variables
+  .m,  .mf, .mh, .mi, .mo   { color: $sage-green; }                      // Numbers
+  .o,  .ow                  { color: $warm-muted; }                      // Operators
+  .p                        { color: $warm-border; }                     // Punctuation
+  .err                      { color: #d76e6e; background-color: transparent; } // Errors
+  .gd                       { color: #d76e6e; }                          // Diff deleted
+  .gi                       { color: $sage-green; }                      // Diff inserted
+  .gh, .gu                  { color: $warm-text; font-weight: bold; }    // Diff headers
+}
+
+// --- TABLES ---
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 1.5em 0;
+  background-color: $warm-surface;
+  border: 1px solid $warm-border;
+  border-radius: 4px;
+  overflow: hidden;
+}
+
+thead {
+  background-color: $warm-highlight;
+  border-bottom: 2px solid $clay-orange;
+}
+
+th, td {
+  padding: 0.75em 1em;
+  text-align: left;
+  border-bottom: 1px solid $warm-border;
+}
+
+th {
+  color: $warm-text;
+  font-weight: 600;
+}
+
+td {
+  color: $warm-muted;
+}
+
+tbody tr:hover {
+  background-color: $warm-highlight;
+}
+
+// --- HORIZONTAL RULES ---
+hr {
+  border: none;
+  border-top: 1px solid $warm-border;
+  margin: 2em 0;
+}
+
+// --- LISTS ---
+ul, ol {
+  margin-left: 1.5em;
+  line-height: 1.8;
+}
+
+li {
+  margin-bottom: 0.5em;
+  color: $warm-text;
+}
+
+// --- PAGE CONTENT WRAPPER ---
+.page-content {
+  background-color: $warm-charcoal;
+  padding: $spacing-unit 0;
+}
+
+.wrapper {
+  max-width: $content-width;
+  margin: 0 auto;
+  padding: 0 $spacing-unit;
+}
+
+// --- POST LIST ---
+.post-list {
+  list-style: none;
+  margin-left: 0;
+
+  > li {
+    margin-bottom: 2em;
+    padding-bottom: 1.5em;
+    border-bottom: 1px solid $warm-border;
+
+    &:last-child {
+      border-bottom: none;
+    }
+  }
+}
+
+.post-link {
+  font-size: 1.5em;
+  font-weight: 600;
+  color: $warm-text;
+  border-bottom: 2px solid transparent;
+
+  &:hover {
+    color: $clay-orange;
+    border-bottom-color: $clay-orange;
+  }
+}
+
+// --- SELECTION ---
+::selection {
+  background-color: rgba($clay-orange, 0.3);
+  color: $warm-text;
+}
+
+::-moz-selection {
+  background-color: rgba($clay-orange, 0.3);
+  color: $warm-text;
+}
+
+// --- RESPONSIVE ADJUSTMENTS ---
+@media screen and (max-width: 600px) {
+  body {
+    font-size: 16px;
+  }
+
+  h1 {
+    font-size: 1.8em;
+  }
+
+  h2 {
+    font-size: 1.5em;
+  }
+
+  .wrapper {
+    padding: 0 15px;
+  }
+}
