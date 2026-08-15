@@ -2,11 +2,10 @@
 ---
 
 // ============================================================================
-// WARM DARK THEME: Claude.ai meets Solarized Dark
-// A night-mode reading platform with low-contrast warmth
+// DUAL THEME: Claude.ai Light + Dark
 // ============================================================================
 
-// --- COLOR PALETTE ---
+// --- DARK THEME COLOR PALETTE ---
 $warm-charcoal:      #211f1c;  // Background
 $warm-surface:       #2a2824;  // Header, footer, code blocks
 $warm-border:        #423e37;  // Borders, dividers
@@ -17,6 +16,17 @@ $sage-green:         #8fa998;  // Secondary accent (code syntax)
 $sage-muted:         #6b8273;  // Muted sage for comments
 $warm-highlight:     #3a362f;  // Hover backgrounds
 $warm-code-bg:       #282521;  // Inline code background
+
+// --- LIGHT THEME COLOR PALETTE (Claude.ai inspired) ---
+$light-bg:           #f9f7f4;  // Warm cream background
+$light-surface:      #ffffff;  // White surfaces
+$light-border:       #e5e1da;  // Subtle warm borders
+$light-text:         #2d2a26;  // Dark charcoal text
+$light-muted:        #6b635a;  // Muted brown-grey
+$light-accent:       #d86b4f;  // Warm terracotta accent
+$light-code-accent:  #5a8f7b;  // Muted teal for code
+$light-highlight:    #f0ebe3;  // Hover backgrounds
+$light-code-bg:      #f5f2ed;  // Code block backgrounds
 
 // --- OVERRIDE MINIMA'S SASS VARIABLES (BEFORE IMPORT) ---
 $text-color:         $warm-text;
@@ -44,6 +54,13 @@ body {
   background-color: $warm-charcoal;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+// --- LIGHT THEME ---
+body.light-theme {
+  color: $light-text;
+  background-color: $light-bg;
 }
 
 // --- CODE TYPOGRAPHY ---
@@ -95,12 +112,34 @@ a {
   }
 }
 
+body.light-theme a {
+  color: $light-accent;
+  border-bottom-color: rgba($light-accent, 0.3);
+
+  &:hover {
+    color: darken($light-accent, 10%);
+    border-bottom-color: $light-accent;
+    background-color: rgba($light-accent, 0.05);
+  }
+
+  &:visited {
+    color: darken($light-accent, 12%);
+  }
+}
+
 // --- HEADER ---
 .site-header {
   background-color: $warm-surface;
   border-top: 3px solid $clay-orange;
   border-bottom: 1px solid $warm-border;
   min-height: 60px;
+  transition: all 0.3s ease;
+}
+
+body.light-theme .site-header {
+  background-color: $light-surface;
+  border-top-color: $light-accent;
+  border-bottom-color: $light-border;
 }
 
 .site-title {
@@ -328,6 +367,167 @@ li {
   color: $warm-text;
 }
 
+// --- LIGHT THEME OVERRIDES ---
+body.light-theme {
+  .site-title {
+    color: $light-text !important;
+    &:hover {
+      color: $light-accent !important;
+    }
+  }
+
+  .site-nav .page-link {
+    color: $light-muted;
+    &:hover {
+      color: $light-text;
+      background-color: $light-highlight;
+    }
+  }
+
+  .site-footer {
+    background-color: $light-surface;
+    border-top-color: $light-border;
+    color: $light-muted;
+
+    a {
+      color: $light-code-accent;
+      border-bottom-color: rgba($light-code-accent, 0.3);
+      &:hover {
+        color: darken($light-code-accent, 10%);
+        border-bottom-color: $light-code-accent;
+      }
+    }
+  }
+
+  .post-meta {
+    color: $light-muted;
+  }
+
+  .post-title, h1, h2, h3, h4, h5, h6 {
+    color: $light-text;
+  }
+
+  h2 {
+    border-bottom-color: $light-accent;
+  }
+
+  h3 {
+    color: $light-muted;
+  }
+
+  blockquote {
+    color: $light-muted;
+    border-left-color: $light-accent;
+    background-color: rgba($light-highlight, 0.5);
+  }
+
+  pre, code {
+    background-color: $light-code-bg;
+    border-color: $light-border;
+  }
+
+  .highlight {
+    background-color: $light-surface;
+    border: 1px solid $light-border;
+  }
+
+  table {
+    background-color: $light-surface;
+    border-color: $light-border;
+  }
+
+  thead {
+    background-color: $light-highlight;
+    border-bottom-color: $light-accent;
+  }
+
+  th {
+    color: $light-text;
+  }
+
+  td {
+    color: $light-muted;
+    border-bottom-color: $light-border;
+  }
+
+  tbody tr:hover {
+    background-color: $light-highlight;
+  }
+
+  hr {
+    border-top-color: $light-border;
+  }
+
+  li {
+    color: $light-text;
+  }
+
+  .page-content {
+    background-color: $light-bg;
+  }
+
+  .post-list > li {
+    border-bottom-color: $light-border;
+  }
+
+  .post-link {
+    color: $light-text;
+    &:hover {
+      color: $light-accent;
+      border-bottom-color: $light-accent;
+    }
+  }
+
+  ::selection {
+    background-color: rgba($light-accent, 0.2);
+    color: $light-text;
+  }
+
+  ::-moz-selection {
+    background-color: rgba($light-accent, 0.2);
+    color: $light-text;
+  }
+}
+
+// --- THEME TOGGLE BUTTON ---
+.theme-toggle {
+  position: fixed;
+  bottom: 2rem;
+  right: 2rem;
+  width: 56px;
+  height: 56px;
+  border-radius: 50%;
+  background-color: $warm-surface;
+  border: 2px solid $warm-border;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 24px;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+  z-index: 1000;
+
+  &:hover {
+    transform: scale(1.1);
+    box-shadow: 0 6px 16px rgba(0, 0, 0, 0.4);
+  }
+
+  &:active {
+    transform: scale(0.95);
+  }
+}
+
+body.light-theme .theme-toggle {
+  background-color: $light-surface;
+  border-color: $light-border;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+
+  &:hover {
+    box-shadow: 0 6px 16px rgba(0, 0, 0, 0.15);
+  }
+}
+
 // --- RESPONSIVE ADJUSTMENTS ---
 @media screen and (max-width: 600px) {
   body {
@@ -344,5 +544,13 @@ li {
 
   .wrapper {
     padding: 0 15px;
+  }
+
+  .theme-toggle {
+    bottom: 1.5rem;
+    right: 1.5rem;
+    width: 48px;
+    height: 48px;
+    font-size: 20px;
   }
 }
