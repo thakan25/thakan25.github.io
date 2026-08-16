@@ -1,0 +1,30 @@
+{% comment %}
+  Post Card Component
+  Usage: {% include post-card.html post=post %}
+  Requires: post object with .url, .title, .date, .excerpt
+  Optional: post.image (for thumbnail), post.summary (overrides excerpt)
+{% endcomment %}
+
+<a href="{{ include.post.url | relative_url }}" class="post-card">
+  {% if include.post.image %}
+  <div class="post-card__thumbnail">
+    <img src="{{ include.post.image | relative_url }}" alt="{{ include.post.title | escape }}" loading="lazy">
+  </div>
+  {% endif %}
+
+  <div class="post-card__content">
+    <time class="post-card__date" datetime="{{ include.post.date | date_to_xmlschema }}">
+      {{ include.post.date | date: "%b %-d, %Y" }}
+    </time>
+
+    <h3 class="post-card__title">{{ include.post.title | escape }}</h3>
+
+    <p class="post-card__excerpt">
+      {% if include.post.summary %}
+        {{ include.post.summary }}
+      {% else %}
+        {{ include.post.excerpt | strip_html | truncatewords: 30 }}
+      {% endif %}
+    </p>
+  </div>
+</a>
