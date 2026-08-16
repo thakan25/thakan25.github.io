@@ -689,3 +689,15 @@ body.light-theme .post-card__excerpt {
     }
   }
 }
+
+// --- GISCUS COMMENTS ---
+.giscus-wrapper {
+  max-width: $content-width;
+  margin: 3rem auto 2rem;
+  padding: 0 $spacing-unit;
+}
+
+.giscus {
+  // Giscus will automatically adapt to dark/light theme
+  // using data-theme="preferred_color_scheme"
+}

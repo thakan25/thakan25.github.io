@@ -36,6 +36,9 @@
 
       // Update icon
       updateToggleIcon(toggleButton, newTheme);
+
+      // Sync Giscus theme if present
+      syncGiscusTheme(newTheme);
     });
 
     // Add button to page
@@ -51,6 +54,18 @@
       button.innerHTML = '☀️'; // Sun for switching to light
       button.setAttribute('aria-label', 'Switch to light theme');
     }
+  }
+
+  // Sync Giscus theme when toggling
+  function syncGiscusTheme(theme) {
+    const iframe = document.querySelector('iframe.giscus-frame');
+    if (!iframe) return;
+
+    const giscusTheme = theme === 'light' ? 'light' : 'dark';
+    iframe.contentWindow.postMessage(
+      { giscus: { setConfig: { theme: giscusTheme } } },
+      'https://giscus.app'
+    );
   }
 
   // Initialize when DOM is ready
