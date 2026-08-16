@@ -1,9 +1,6 @@
 ---
 layout: page
-title: Home
 ---
-
-# Recent Posts
 
 <div class="post-cards-container">
   {% for post in site.posts %}
