@@ -695,9 +695,16 @@ body.light-theme .post-card__excerpt {
   max-width: $content-width;
   margin: 3rem auto 2rem;
   padding: 0 $spacing-unit;
+  border-top: 1px solid $warm-border;
+  padding-top: 2rem;
 }
 
+body.light-theme .giscus-wrapper {
+  border-top-color: $light-border;
+}
+
+// Custom Giscus styling to match theme
 .giscus {
-  // Giscus will automatically adapt to dark/light theme
-  // using data-theme="preferred_color_scheme"
+  // Let Giscus handle its own theming via iframe
+  // We've configured it to sync with our theme toggle
 }
