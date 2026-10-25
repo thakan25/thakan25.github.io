@@ -6,7 +6,7 @@ date: 2026-10-25 15:00:00 +0900
 author: Sachin Thakan
 categories: [fact-check, india]
 tags: [SIR, india, election-commission, voter-list, protests]
-description: "India is re-checking its voter lists. In one state alone, 9 million people were removed in five months, unevenly, with almost no appeals heard. People protesting it are being detained."
+description: "India is re-checking its voter lists. About 133 million names have been removed so far. In West Bengal, removals fell unevenly, and almost no appeals have been heard. People protesting it are being detained."
 ---
 
 <style>
@@ -26,20 +26,18 @@ description: "India is re-checking its voter lists. In one state alone, 9 millio
 </style>
 
 <div class="ja" markdown="1">
-**日本語のまとめ**
+**India's SIR at a glance**
 
-インドでは今、選挙管理委員会が全国の有権者名簿を見直しています（SIR）。西ベンガル州だけで、わずか5か月の間に約900万人が名簿から削除されました。そのうち約270万人は「書類で資格を証明できない」と判断された人たちで、その7割がイスラム教徒でした（州の人口に占める割合は27%）。
-
-削除された人は異議申し立てができますが、9月までに審理されたのはわずか約3%。審理が終わるまでは投票できません。この問題に抗議する若者たちは、各地で数千人規模で拘束されています。
-
-民主主義は「投票できること」から始まります。名簿から消された人々と、声を上げる人々に連帯を。
+- India has close to **1 billion** registered voters. Since 2025, the Election Commission has been re-checking every name, state by state.
+- So far, about **133 million names** have been removed from the draft voter lists: roughly **1 in 7** of all India's voters. Not every state has finished.
+- About 72% were marked **absent or moved**, 21% **dead** and 7.5% **duplicates**. Many of the "absent" were simply not found at home, and were removed **without a notice or a hearing**.
+- People who were removed have to prove they belong to get back on. Until they do, **they cannot vote**.
+- Where the data is detailed enough to check, the removals were **not even**. West Bengal, below, is the clearest case.
 </div>
 
-## India is checking who is allowed to vote
+## How the SIR works
 
-India is the world's largest democracy, with nearly a billion registered voters. Since 2025, its Election Commission has been re-checking the voter list door to door, state by state. The process is called the **Special Intensive Revision (SIR)**.
-
-On paper, that's sensible: voter lists collect people who have died or moved. But the way it was done puts the burden on the voter. If an official couldn't find you, you were removed. If a computer found something odd in your family details, you had to prove with documents that you belong on the list.
+The Special Intensive Revision (SIR) is a door-to-door re-check of the voter list. On paper, that's sensible: voter lists collect people who have died or moved. But the way it is done puts the burden on the voter. If an official couldn't find you, you were removed. If a computer found something odd in your family details, you had to prove with documents that you belong on the list.
 
 I looked closely at one state, **West Bengal** (about 100 million people), where the data is detailed enough to check, seat by seat.
 
@@ -143,4 +141,4 @@ If you read this far: thank you. Sharing it helps.
 
 ---
 
-*Religion of removed voters is estimated from names by the Sabar Institute; these are patterns across areas, not proof about any one person. Data: [Sabar Institute](https://github.com/sabar-institute/sir) · [Civic Research Group appeal tracker](https://appeal.civicresearch.in/) · [Election Commission figures on appeals (LiveLaw)](https://www.livelaw.in/amp/top-stories/supreme-court-west-bengal-sir-eci-affidavit-over-22-lakh-appeals-against-exclusion-of-voters-16-lakh-against-inclusion-551110) · [High Court remark (Scroll)](https://scroll.in/latest/1094149/bengal-sir-tribunals-could-take-21-years-to-clear-appeals-at-current-pace-remarks-calcutta-hc). Spotted an error? Tell me in the comments.*
+*Religion of removed voters is estimated from names by the Sabar Institute; these are patterns across areas, not proof about any one person. National figures: [Election Commission data via Deccan Herald, 30 Sep 2026](https://www.deccanherald.com/india/sir-133-crore-names-wiped-out-of-draft-voter-lists-so-far-triggering-opposition-backlash-4164836). Data: [Sabar Institute](https://github.com/sabar-institute/sir) · [Civic Research Group appeal tracker](https://appeal.civicresearch.in/) · [Election Commission figures on appeals (LiveLaw)](https://www.livelaw.in/amp/top-stories/supreme-court-west-bengal-sir-eci-affidavit-over-22-lakh-appeals-against-exclusion-of-voters-16-lakh-against-inclusion-551110) · [High Court remark (Scroll)](https://scroll.in/latest/1094149/bengal-sir-tribunals-could-take-21-years-to-clear-appeals-at-current-pace-remarks-calcutta-hc). Spotted an error? Tell me in the comments.*
